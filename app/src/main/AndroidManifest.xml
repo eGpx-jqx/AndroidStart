@@ -12,10 +12,16 @@
             android:theme="@style/Theme.MyApplication"
             tools:targetApi="34">
         <activity
-                android:name=".SecondActivity"
-                android:exported="false">
+                android:name=".ThreeActivity" android:exported="true">
             <intent-filter>
-                <action android:name="android.intent.action.SECOND"/>
+                <action android:name="test.ThreeActivity"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity
+                android:name=".SecondActivity" android:exported="true">
+            <intent-filter>
+                <action android:name="test.SecondActivity"/>
                 <category android:name="android.intent.category.DEFAULT"/>
             </intent-filter>
         </activity>
@@ -24,7 +30,6 @@
                 android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
-
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>

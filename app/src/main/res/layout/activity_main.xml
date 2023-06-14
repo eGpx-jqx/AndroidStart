@@ -9,4 +9,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="toSecond"/>
+    <Button
+            android:id="@+id/toThree"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="toThree"/>
 </LinearLayout>
