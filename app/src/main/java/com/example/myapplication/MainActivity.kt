@@ -25,6 +25,27 @@ class MainActivity : AppCompatActivity() {
         binding.toThree.setOnClickListener(threeOnClick)
     }
 
+
+
+    //meun相关
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.main, menu)
+        return true
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        when (item.itemId) {
+            R.id.add_item -> longMessage("you click add_item")
+            R.id.remove_item -> longMessage("you click remove_item")
+        }
+        return true
+    }
+
+
+
+
+
+    //region  onClick点击事件相关方法   intent
     //toSecond点击事件
     val secondOnclick: (View) -> Unit = {
         //显示指定intent
@@ -44,19 +65,5 @@ class MainActivity : AppCompatActivity() {
 //        intent.addCategory("android.intent.category.DEFAULT")
         startActivity(intent)
     }
-
-
-    //meun相关
-    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
-        menuInflater.inflate(R.menu.main, menu)
-        return true
-    }
-
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        when (item.itemId) {
-            R.id.add_item -> longMessage("you click add_item")
-            R.id.remove_item -> longMessage("you click remove_item")
-        }
-        return true
-    }
+    //endregion
 }
