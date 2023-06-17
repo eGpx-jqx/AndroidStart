@@ -48,8 +48,9 @@ class MainActivity : AppCompatActivity() {
             Log.d("MainActivity", "rsData: ${rs.data?.getStringExtra("ext1")}")
         }
         binding.toFourth.setOnClickListener {
-            val intent = Intent(this, SecondActivity::class.java)
-            intent.putExtra("ext1", "hello fourth")
+            val intent = Intent(this, SecondActivity::class.java).apply {
+                putExtra("ext1", "hello fourth")
+            }
             //由以上注册的ActivityResultLauncher发起调用
             launcher.launch(intent)
         }
