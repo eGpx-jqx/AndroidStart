@@ -15,7 +15,7 @@ import com.example.myapplication.ext.longMessage
 
 class MainActivity : AppCompatActivity() {
 
-    //见: https://juejin.cn/post/6921677731088646158
+    //见: https://juejin.cn/post/6921677731088646158   创建binding类绑定layout和activity
     private lateinit var binding: ActivityMainBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -39,7 +39,8 @@ class MainActivity : AppCompatActivity() {
          * GetContent: 提示用选择一条内容，返回一个通过ContentResolver#openInputStream(Uri)访问原生数据的Uri地址（content://形式） 。默认情况下，它增加了 Intent#CATEGORY_OPENABLE, 返回可以表示流的内容。
          * CreateDocument: 提示用户选择一个文档，返回一个(file:/http:/content:)开头的Uri。
          * OpenMultipleDocuments: 提示用户选择文档（可以选择多个），分别返回它们的Uri，以List的形式。
-         * OpenDocumentTree: 提示用户选择一个目录，并返回用户选择的作为一个Uri返回，应用程序可以完全管理返回目录中的文档。 上面这些预定义的Contract中，除了StartActivityForResult和RequestMultiplePermissions之外，基本都是处理的与其他APP交互，返回数据的场景，比如，拍照，选择图片，选择联系人，打开文档等等。使用最多的就是StartActivityForResult和RequestMultiplePermissions了。
+         * OpenDocumentTree: 提示用户选择一个目录，并返回用户选择的作为一个Uri返回，应用程序可以完全管理返回目录中的文档。
+         * 上面这些预定义的Contract中，除了StartActivityForResult和RequestMultiplePermissions之外，基本都是处理的与其他APP交互，返回数据的场景，比如，拍照，选择图片，选择联系人，打开文档等等。使用最多的就是StartActivityForResult和RequestMultiplePermissions了。
          */
         val launcher = registerForActivityResult(StartActivityForResult()) { rs ->
             Log.d("MainActivity", "rs: $rs")
@@ -55,12 +56,13 @@ class MainActivity : AppCompatActivity() {
     }
 
 
-    //meun相关
+    //meun相关， 填充menu
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         menuInflater.inflate(R.menu.main, menu)
         return true
     }
 
+    //menu菜单选择触发事件
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
             R.id.add_item -> longMessage("you click add_item")
