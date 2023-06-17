@@ -11,4 +11,8 @@ class DialogActivity : AppCompatActivity() {
         binding= ActivityDialogBinding.inflate(layoutInflater)
         setContentView(binding.root)
     }
+
+    /**
+     * 配置theme为Dialog， 调用此activity时将展示对话框，不占用全屏, 见@style/Theme.AppCompat.Dialog
+     */
 }

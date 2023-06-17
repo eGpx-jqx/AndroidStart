@@ -13,6 +13,18 @@ import com.example.demoandroidlifecycle.databinding.ActivityMainBinding
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
 
+    /**
+     * - **onCreate**  首次创建时调用
+     * - **onStart** 此activity可见时调用
+     * - ****onResume**** *此activity准备好和用户交互时调用， 此时activity一定处于栈顶*
+     * - **onPause** *此activity停止 但是依旧可见  如调用dialog时*
+     * - **onStop** *此activity停止 完全不可见*
+     * - **onDestroy** *此activity被销毁*
+     * - **onRestart** *重新启动*
+     *     - 若要返回的activity已被销毁， 则从onCreate开始
+     *     - 若要返回的activity未被销毁，依旧存在栈中 ，则从**onRestart** 开始代替onCreate
+     */
+
     //创建此activity时调用， 初始化工作， 一般只调用一次，后续如果被onDestroy了则会再次onCreate
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
