@@ -4,9 +4,11 @@
               android:layout_width="match_parent"
               android:layout_height="match_parent">
 
-    <include layout="@layout/title_layout"/>
+<!--    <include layout="@layout/title_layout"/>-->
+    <com.example.customlayout.TitleLayout android:layout_width="match_parent" android:layout_height="wrap_content"/>
 </LinearLayout>
 
+<!--include： 用于引入布局， 但是布局中如果有按钮等，按钮点击事件需要每次引入后都在主布局中实现， 推荐使用引入控件的方式， 见 com.example.customlayout.TitleLayout-->
 <!--vertical： 垂直布局， 所有布局组件在一个垂直线上依次排列-->
 <!--horizontal: 水平布局-->
-<!--这里的<include layout="@layout/title_layout"/>指示引入 title_layout.xml这个布局 ， 这种方式为 引入布局-->
+<!--com.example.customlayout.TitleLayout: 引入控件， 无需自行实现控件的事件了，控件已有实现-->
