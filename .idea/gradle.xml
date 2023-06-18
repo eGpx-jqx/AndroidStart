@@ -8,8 +8,9 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
-            <option value="$PROJECT_DIR$/app" />
-            <option value="$PROJECT_DIR$/demoandroidlifecycle" />
+            <option value="$PROJECT_DIR$/demo1activitybase" />
+            <option value="$PROJECT_DIR$/demo2androidlifecycle" />
+            <option value="$PROJECT_DIR$/demo3customlayout" />
           </set>
         </option>
       </GradleProjectSettings>

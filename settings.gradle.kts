@@ -29,5 +29,6 @@ dependencyResolutionManagement {
     }
 }
 rootProject.name = "My Application"
-include(":app")
-include(":demoandroidlifecycle")
+include(":demo1activitybase")
+include(":demo2androidlifecycle")
+include(":demo3customlayout")
