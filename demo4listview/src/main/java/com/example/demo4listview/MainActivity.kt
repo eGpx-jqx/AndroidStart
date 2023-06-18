@@ -30,7 +30,8 @@ class MainActivity : AppCompatActivity() {
         /**
          * parent: 指listView 视图对象， 内含n个列表视图对象
          * view： 指fruit_item视图对象，包含在listView中
-         * position：角标，第n个列表数据视图角标
+         * position：此view在adapter中的位置
+         * id：此列表第几行
          */
         binding.listView.setOnItemClickListener { parent, view, position, id ->
             val fruit = fruitList[position]
