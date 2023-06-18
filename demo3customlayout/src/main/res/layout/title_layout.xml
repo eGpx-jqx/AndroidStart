@@ -29,7 +29,7 @@
 
 </LinearLayout>
 
-<!--        android:layout_gravity： 指示此布局组件相对于父布局组件的排列方式， 作用于布局组件-->
+<!--        android:layout_gravity： 指示此布局组件相对于父布局组件的排列方式， 作用于布局组件。 如TextView android:layout_gravity="center"表示此TextView在宽度和高度的限制内 左右上下居中 -->
 <!--        android:gravity： 指示此布局组件内部属性排列方式，作用于内部属性（如TextView的此属性设置的是android:text具体文本如何展示的）-->
 <!--        android:layout_weight： 宽度权重，如上文件， 在水平线上，除去无权重布局组件占用空间， 其余布局组件被按权重分配给各组件。（此布局组件权重/布局组件权重和）*可用总空间-->
 <!--        这里设定了 horizontal水平布局，此时布局组件会在一个水平线上依次排列-->
