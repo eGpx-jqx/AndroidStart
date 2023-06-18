@@ -8,6 +8,9 @@ import com.example.demo4listview.databinding.ActivityMainBinding
 import com.example.demo4listview.entity.Fruit
 import com.example.demo4listview.listadapter.FruitAdapter
 
+/**
+ * listView已被更强大的RecyclerView取代！
+ */
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
