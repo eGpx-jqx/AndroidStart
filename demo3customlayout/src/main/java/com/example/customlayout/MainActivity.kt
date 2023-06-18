@@ -10,6 +10,8 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        //manifest.xml引入了自定义的头部组件， 这里禁用掉android自带的头组件
         supportActionBar?.hide()
     }
 }
