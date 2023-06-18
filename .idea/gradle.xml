@@ -11,6 +11,7 @@
             <option value="$PROJECT_DIR$/demo1activitybase" />
             <option value="$PROJECT_DIR$/demo2androidlifecycle" />
             <option value="$PROJECT_DIR$/demo3customlayout" />
+            <option value="$PROJECT_DIR$/demo4listview" />
           </set>
         </option>
       </GradleProjectSettings>

@@ -32,3 +32,4 @@ rootProject.name = "My Application"
 include(":demo1activitybase")
 include(":demo2androidlifecycle")
 include(":demo3customlayout")
+include(":demo4listview")
